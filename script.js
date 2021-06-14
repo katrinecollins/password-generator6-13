@@ -26,41 +26,35 @@ var generatePassword = function () {
   
   console.log(isNumber)
 
-  // ending 
+
 
   for (let i = 0; i < passwordsize; i++) {
 
-   //  && AND  --> if at least one of the statements is false, then the final outcome is false
-   //  || OR   --> if at least one of the statements is true, then the final outcome is true
-   //  ! NOT
+
 
       if (isLowerCase && finalPassword.length < passwordsize) {
-        // var lowercase = "abcdefghijklmnopqrstuvwxyz"
-        //                  012345
+
     
         var randomPickLowerCase = Math.floor(Math.random() * lowercase.length)
-        //  randomPickLowerCase = 15
+
     
         var pickOneLowerCaseLetter = lowercase.charAt(randomPickLowerCase)
-        // pickOneLowerCaseLetter =  "abcdefghijklmnopqrstuvwxyz".charAt(15)
-        // pickOneLowerCaseLetter =  "p"
+       
     
         finalPassword =finalPassword+ pickOneLowerCaseLetter 
-        // finalPassword =  "" + "p"
-        // finalPassword = "p"
+      
       }
     
     
       if(isUpperCase && finalPassword.length < passwordsize){
         var randomPickUpperCase = Math.floor(Math.random() * uppercase.length)
-        // 2
+
     
         var pickOneUpperCaseLetter = uppercase.charAt(randomPickUpperCase)
-        // C
+        
     
         finalPassword =finalPassword+ pickOneUpperCaseLetter
-        // finalPassword = "p" + "C"
-        // finalPassword= "pC"
+       
       }
     
     
@@ -89,10 +83,10 @@ var generatePassword = function () {
 
 
 
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -101,5 +95,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword)
